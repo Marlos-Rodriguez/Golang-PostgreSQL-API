@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 
@@ -10,7 +11,7 @@ import (
 )
 
 func main() {
-	var port string = "8080"
+	port := os.Getenv("PORT")
 
 	router := mux.NewRouter()
 

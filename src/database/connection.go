@@ -3,13 +3,16 @@ package database
 import (
 	"database/sql"
 	"log"
+	"os"
 
 	_ "github.com/lib/pq"
 )
 
 //GetConnection ...
 func GetConnection() *sql.DB {
-	connStr := "postgres://postgres:Elmejordiademivida2009@localhost/todos_db?sslmode=disable"
+	URLDB := os.Getenv("DATABASE_URL")
+
+	connStr := URLDB
 	db, err := sql.Open("postgres", connStr)
 
 	if err != nil {
