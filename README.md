@@ -1,6 +1,13 @@
 # Golang-PostgreSQL-API
 A Golang REST API with PostgreSQL of To-Do
 
+# Install
+Copy the repo and create a ```.env``` with the variables ```PORT``` and ```DATABASE_URL```
+```
+PORT=8080
+DATABASE_URL=Your URL of PostgreSQL
+```
+
 # Paths
  **Get All To-Do's**:   
 ```Get``` ```api/todos```
